@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css">
+    <!-- <script src="./js/index.js"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">    <title>Document</title>
+	
+	<!-- <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/simplebar@5.2.0/dist/simplebar.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@5.2.0/dist/simplebar.min.js"></script> -->
+</head>
+<body>
+
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img class="w-20 md:w-32 lg:w-40" src="./img/logo.png" alt="">
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900" id="button-about">About</a>
+            <a class="mr-5 hover:text-gray-900" id="button-services">Services</a>
+            <a class="mr-5 hover:text-gray-900" id="button-portfolio">Portfolio</a>
+            <a class="mr-5 hover:text-gray-900" id="button-contact">Contact</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    <section class="text-gray-700 body-font hero-section mb-12 ">
+        <div class="container hero-content mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <!-- <div class="square-background"></div> -->
+            <div class="md:flex-grow md:w-1/2 content-main ml-10 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <!-- <h6 class="title-font sm:text-lg text-lg mb-2 ml-3 leading-none font-light text-gray-900 heading-secondary">I’ll help you convert</h6> -->
+            <h1 class="title-font sm:text-6xl text-4xl mb-8 leading-none font-bold text-gray-900 heading-primary">Hi, I am Sahil. I can design
+				
+                <br class="hidden lg:inline-block">you apps which users
+                <br class="hidden lg:inline-block"><span class="heading-color">love to use.</span>
+              <!-- <br class="hidden lg:inline-block"> -->
+            </h1>
+            <p class="mb-6 sm:text-xl text-xl leading-relaxed content-intro">Discover my work & process for creating <br class="hidden lg:inline-block">bold & beautiful websites OR just drop a <br class="hidden lg:inline-block">random hello if you want to know me better.</p>
+            <div class="flex justify-center">
+              <button id="project" class="inline-flex text-white border-0 py-3 px-6 mb-2 focus:outline-none text-lg main-cta draw-border">See all Projects</button>
+			</div>
+			<!-- <svg id="svg-project" width="26" height="50" viewBox="0 0 26 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M2.57987 12.8616V27.8769C2.57987 33.6243 7.23394 38.2782 12.9786 38.2782C18.7225 38.2782 23.3773 33.622 23.3773 27.8769V12.8616C23.3773 7.11421 18.7232 2.46036 12.9786 2.46036C7.23467 2.46036 2.57987 7.11647 2.57987 12.8616ZM0.269043 12.8616C0.269043 5.84092 5.95775 0.149536 12.9786 0.149536C19.9979 0.149536 25.6881 5.83638 25.6881 12.8616V27.8769C25.6881 34.8976 19.9994 40.589 12.9786 40.589C5.9593 40.589 0.269043 34.9021 0.269043 27.8769V12.8616Z" fill="#f5f3f2"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11.8232 9.39777C11.8232 8.75693 12.3361 8.23743 12.9787 8.23743C13.6168 8.23743 14.1341 8.75849 14.1341 9.39777V14.0096C14.1341 14.6504 13.6212 15.1699 12.9787 15.1699C12.3405 15.1699 11.8232 14.6488 11.8232 14.0096V9.39777Z" fill="#f5f3f2"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M12.9789 54.2106L21.5247 45.6648C21.9759 45.2135 22.7075 45.2135 23.1587 45.6648C23.6099 46.116 23.6099 46.8475 23.1587 47.2988L13.7959 56.6616C13.5702 56.8872 13.2745 57 12.9789 57C12.6832 57 12.3875 56.8872 12.1619 56.6616L2.77152 47.2713C2.3203 46.8201 2.3203 46.0885 2.77152 45.6373C3.22273 45.1861 3.9543 45.1861 4.40552 45.6373L12.9789 54.2106Z" fill="#f5f3f2"/>
+				</svg>				 -->
+          </div>
+          <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded content-img" alt="hero" src="./img/Group 6.png">
+          </div> -->
+        </div>
+      </section>
+
+<!-- 
+      <section class="text-gray-700 body-font content-work">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="flex flex-col text-center w-full mb-20 ">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 content-heading">Master Cleanse Reliac Heirloom</h1>
+          </div>
+          <div class="flex flex-wrap md:-m-2 -m-1">
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="./img/Chocolate Bar design.png">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="./img/manyavarlight.png">
+              </div>
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="w-full h-full object-cover object-center block" src="./img/Charlie_album.png">
+              </div>
+            </div>
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="w-full h-full object-cover object-center block" src="./img/Dribbble Shot HD-Rituals_eyeliner.png">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+
+      <section class="section-work text-gray-700 body-font">
+        <div class="container px-5 py-24 mx-auto" >
+          <div data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-duration="1200"
+          data-sal-easing="ease-out-back"
+          class="flex flex-col p-4 w-full mb-16">
+            <h1 
+            class=" sm:text-4xl text-4xl leading-none heading-work-intro font-bold title-font mb-4 text-gray-300"
+             >my work</h1>
+             <div class="flex mb-6">
+              <div class="w-48 h-1 inline-flex" style="background:url(./img/merbbles.jpg) no-repeat center fixed;
+                background-size: cover"></div>
+              </div>
+              <p class="lg:w-2/3  text-gray-400 leading-relaxed intro-para text-base">I focus on creating websites that fit all modern<br>screens. Providing intutive UI with best<br>user experience.</p>
+            </div>
+            
+          
+          <div class="flex flex-wrap content-images">
+            <div data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-duration="1200"
+            data-sal-easing="ease-out-back"
+            class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center " src="img/Group 7.png">
+                <div class="px-8 py-10 content-overlay-1 relative z-10 w-full border-4 opacity-0 hover:opacity-100">
+                  <a target="_blank" href="https://nexterhomes.000webhostapp.com/"><h2 class="tracking-widest heading-overlay-primary text-sm title-font font-medium text-indigo-500 mb-1">Visit</h2></a>
+                  <a target="_blank" href="https://nexterhomes.000webhostapp.com/"><h1 class="title-font text-lg heading-overlay-secondary font-medium text-gray-900 mb-3">Nexter Homes</h1></a>
+                  <p class="leading-relaxed overlay-para">Fully responsive, mobile friendly and all browser compatible website Nexter for buying homes and property.</p>
+                </div>
+              </div>
+              <a target="_blank" href="https://nexterhomes.000webhostapp.com/"><h1 class="title-font text-center text-lg heading-label font-medium text-gray-900 mb-3">Nexter Homes</h1></a>
+            </div>
+            <div data-sal="slide-up"
+            data-sal-delay="500"
+            data-sal-duration="1200"
+            data-sal-easing="ease-out-back"
+            class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center " src="img/Group 8.png">
+                <div class="px-8 py-10 content-overlay-2 relative z-10 w-full border-4 opacity-0 hover:opacity-100">
+                  <a target="_blank" href="https://natoursbooking.000webhostapp.com/"><h2 class="tracking-widest heading-overlay-primary text-sm title-font font-medium text-indigo-500 mb-1">Visit</h2></a>
+                  <a target="_blank" href="https://natoursbooking.000webhostapp.com/"><h1 class="title-font text-lg heading-overlay-secondary font-medium text-gray-900 mb-3">Natours</h1></a>
+                  <p class="leading-relaxed overlay-para">Fully responsive, mobile friendly and all browser compatible website Nexter for buying homes and property.</p>
+                </div>
+              </div>
+              <a target="_blank" href="https://natoursbooking.000webhostapp.com/"><h1 class="title-font text-center text-lg heading-label font-medium text-gray-900 mb-3">Natours</h1></a>
+            </div>
+            <div data-sal="slide-up"
+            data-sal-delay="800"
+            data-sal-duration="1200"
+            data-sal-easing="ease-out-back"
+            class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center " src="img/Group 9.png">
+                <div class="px-8 py-10 content-overlay-3 relative z-10 w-full border-4 opacity-0 hover:opacity-100">
+                  <a target="_blank" href="https://hotelsbytrillo.000webhostapp.com/"><h2 class="tracking-widest heading-overlay-primary text-sm title-font font-medium text-indigo-500 mb-1">Visit</h2></a>
+                  <a target="_blank" href="https://hotelsbytrillo.000webhostapp.com/"><h1 class="title-font text-lg heading-overlay-secondary font-medium text-gray-900 mb-3">Trillo Hotels</h1></a>
+                  <p class="leading-relaxed overlay-para">Fully responsive, mobile friendly and all browser compatible website Nexter for buying homes and property.</p>
+                </div>
+              </div>
+              <a target="_blank" href="https://hotelsbytrillo.000webhostapp.com/"><h1 class="title-font text-center text-lg heading-label font-medium text-gray-900 mb-3">Trillo Hotels</h1></a>
+            </div>
+            <div data-sal="slide-up"
+            data-sal-delay="500"
+            data-sal-duration="1200"
+            data-sal-easing="ease-out-back"
+            class="lg:w-1/2 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center " src="img/Group 11.png">
+                <div class="px-8 py-10 content-overlay-4 relative z-10 w-full border-4 opacity-0 hover:opacity-100 ">
+                  <a target="_blank" href="https://nexterhomes.000webhostapp.com/"><h2 class="tracking-widest heading-overlay-primary text-sm title-font font-medium text-indigo-500 mb-1">Visit</h2></a>
+                  <a target="_blank" href="https://nexterhomes.000webhostapp.com/"><h1 class="title-font text-lg heading-overlay-secondary font-medium text-gray-900 mb-3">Sewear Clothing</h1></a>
+                  <p class="leading-relaxed overlay-para mb-20">Fully responsive, mobile friendly and all browser compatible website Nexter for buying homes and property.</p>
+                </div>
+              </div>
+              <a target="_blank" href="https://nexterhomes.000webhostapp.com/"><h1 class="title-font text-center text-lg heading-label font-medium text-gray-900 mb-3">Sewear Clothing</h1></a>
+            </div>
+            <div data-sal="slide-up"
+            data-sal-delay="700"
+            data-sal-duration="1200"
+            data-sal-easing="ease-out-back"
+            class="lg:w-1/2 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center " src="img/Group 10.png">
+                <div class="px-8 py-10 content-overlay-5 relative z-10 w-full border-4 opacity-0 hover:opacity-100" >
+                  <a target="_blank" href="https://react-moviedb-sahil.herokuapp.com/"><h2 class="tracking-widest heading-overlay-primary text-sm title-font font-medium text-indigo-500 mb-1">Visit</h2></a>
+                  <a target="_blank" href="https://react-moviedb-sahil.herokuapp.com/"><h1 class="title-font text-lg heading-overlay-secondary font-medium text-gray-900 mb-3">React Movie DB</h1></a>
+                  <p class="leading-relaxed overlay-para mb-20">Fully responsive, mobile friendly and all browser compatible website Nexter for buying homes and property.</p>
+                </div>
+              </div>
+              <a target="_blank" href="https://react-moviedb-sahil.herokuapp.com/"><h1 class="title-font text-center text-lg heading-label font-medium text-gray-900 mb-3">React Movie</h1></a>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="ui-gallery text-gray-700 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-duration="1200"
+          data-sal-easing="ease-out-back"
+          class="flex flex-col p-4 w-full mb-20">
+            <h1 
+            class="sm:text-4xl text-4xl leading-none heading-work-intro font-bold title-font mb-2 text-gray-900"
+             >Design Gallery</h1>
+             <div class="flex mb-6">
+              <div class="w-48 h-1 inline-flex" style="background:url(./img/paint_liquid_stains_140390_3840x2400.jpg) no-repeat center fixed;
+                background-size: cover"></div>
+              </div>
+            <p class="lg:w-2/3 leading-relaxed intro-para text-base">I love designing engaging product experiences<br> using prototyping tools such as Figma & Adobe XD.<br>Dribbble, awwwards and Instagram - my inspiration source.
+          </div>
+          <div class="flex flex-wrap md:-m-2 -m-1">
+            <div class="flex flex-wrap w-1/2">
+              <div data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-duration="1200"
+              data-sal-easing="ease-out-back"
+              class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="./img/tanishq.png">
+              </div>
+              <div data-sal="slide-up"
+              data-sal-delay="400"
+              data-sal-duration="1200"
+              data-sal-easing="ease-out-back"
+              class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="img/Running-app.png">
+              </div>
+              <div data-sal="slide-up"
+              data-sal-delay="500"
+              data-sal-duration="1200"
+              data-sal-easing="ease-out-back" class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="w-full h-full object-cover object-center block" src="./img/Blushwork.png">
+              </div>
+            </div>
+            <div class="flex flex-wrap w-1/2">
+              <div data-sal="slide-up"
+              data-sal-delay="500"
+              data-sal-duration="1200"
+              data-sal-easing="ease-out-back"
+              class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="w-full h-full object-cover object-center block" src="./img/Charlie_album.png">
+              </div>
+              <div data-sal="slide-up"
+              data-sal-delay="600"
+              data-sal-duration="1200"
+              data-sal-easing="ease-out-back"
+              class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="./img/manyavarlight.png">
+              </div>
+              <div data-sal="slide-up"
+              data-sal-delay="700"
+              data-sal-duration="1200"
+              data-sal-easing="ease-out-back"
+              class="md:p-2 p-1 w-1/2"class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="./img/Dribbble Shot HD-Rituals_eyeliner.png">
+              </div>
+            </div>
+          </div>
+          <a href="https://www.dribbble.com/sahil_gulati" class="mx-auto" target="_black" title="View at Dribbble">
+          <button class="flex mx-auto mt-16 draw-border-black dribble-cta border-0 py-2 px-8 focus:outline-none text-lg">
+            View more
+            <!-- <svg width="16px" class="ml-2 heartbeat" height="16px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M128 8.5c66 0 119.4 53.4 119.4 119.3S194 247.2 128 247.2 8.6 193.8 8.6 127.9 62 8.5 128 8.5z" fill="#E74D89"/><path d="M128 255.7c-70.6 0-128-57.3-128-127.8C0 57.3 57.4 0 128 0s128 57.3 128 127.8-57.4 127.9-128 127.9zm107.9-110.4c-3.7-1.2-33.8-10.1-68.1-4.7 14.3 39.2 20.1 71.2 21.2 77.8 24.6-16.5 42.1-42.7 46.9-73.1zm-65.2 83.2c-1.6-9.6-8-43-23.3-82.8-.2.1-.5.2-.7.2-61.7 21.5-83.8 64.2-85.8 68.2 18.5 14.4 41.8 23 67.1 23 15.1.1 29.6-3 42.7-8.6zM46.8 201c2.5-4.2 32.5-53.8 88.9-72.1 1.4-.5 2.9-.9 4.3-1.3-2.7-6.2-5.7-12.4-8.9-18.5-54.6 16.3-107.6 15.6-112.4 15.5 0 1.1-.1 2.2-.1 3.3.1 28.1 10.7 53.7 28.2 73.1zM21 105.6c4.9.1 49.9.3 101.1-13.3C104 60.1 84.4 33.1 81.6 29.2 50.9 43.6 28.1 71.8 21 105.6zm81.4-83.8c3 4 22.9 31 40.8 63.9 38.9-14.6 55.3-36.6 57.3-39.4-19.3-17.1-44.7-27.5-72.5-27.5-8.8 0-17.4 1.1-25.6 3zm110.2 37.1c-2.3 3.1-20.6 26.6-61 43.1 2.5 5.2 5 10.5 7.3 15.8.8 1.9 1.6 3.8 2.4 5.6 36.4-4.6 72.5 2.8 76.1 3.5-.3-25.7-9.5-49.4-24.8-68z" fill="#B2215A"/></svg> -->
+          </button>
+          </a>
+        </div>
+      </section>
+
+      <section class="service text-gray-700 body-font">
+        <div class="service-container container px-5 py-24 mx-auto">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-4xl text-3xl font-bold title-font text-gray-300 mb-4"">How can I help you?</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 text-gray-400 lg:w-3/4 mx-auto">Stunning designs to flawless code, I will ensure your product doesn't miss out on anything and becomes ready before the deadline &#128521;.</p>
+            <div class="flex mt-6 justify-center">
+              <div class="w-48 h-1 rounded-full inline-flex" style="background:url(./img/merbbles.jpg) no-repeat center fixed;
+              background-size: cover"></div>
+            </div>
+          </div>
+          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+            <div class="p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-grey-500 mb-5 flex-shrink-0">
+                <svg id="Capa_1" enable-background="new 0 0 509.632 509.632" class="w-16 h-16 mt-2" viewBox="0 0 509.632 509.632" xmlns="http://www.w3.org/2000/svg"><g><path d="m277.063 480.305c-4.142 0-7.5-3.358-7.5-7.5v-19.943c0-2.856-2.324-5.18-5.18-5.18h-20.135c-2.856 0-5.18 2.324-5.18 5.18v19.943c0 4.142-3.358 7.5-7.5 7.5s-7.5-3.358-7.5-7.5v-19.943c0-11.127 9.053-20.18 20.18-20.18h20.135c11.127 0 20.18 9.053 20.18 20.18v19.943c0 4.142-3.357 7.5-7.5 7.5z"/><g><path d="m326.426 206.146c-2.464-3.329-7.161-4.028-10.491-1.565-3.329 2.465-4.029 7.162-1.565 10.491l37.243 50.301c4.143 5.595 3.843 14.022-.682 19.186l-40.125 45.791h-112.98l-40.125-45.791c-4.525-5.164-4.825-13.591-.682-19.186l73.941-99.866v56.904c-9.373 7.204-14.852 18.222-14.852 30.248 0 21.068 17.14 38.208 38.208 38.208s38.208-17.14 38.208-38.208c0-11.485-5.111-22.21-13.852-29.435v-56.366l16.469 22.243c2.465 3.33 7.162 4.029 10.491 1.565 3.329-2.465 4.029-7.162 1.565-10.491l-32.17-43.45c-5.064-6.84-12.613-10.763-20.71-10.763s-15.646 3.923-20.71 10.763l-88.643 119.723c-8.313 11.228-7.687 27.563 1.457 37.998l33.463 38.187c-8.356 3.896-14.164 12.371-14.164 22.182v35.781c0 10.954 7.237 20.249 17.181 23.357l2.046 59.114c.14 4.052 3.468 7.241 7.491 7.241.088 0 .176-.001.264-.004 4.14-.144 7.379-3.615 7.236-7.755l-1.99-57.488h113.738l-1.99 57.488c-.143 4.14 3.097 7.611 7.236 7.755.088.003.176.004.264.004 4.022 0 7.351-3.189 7.491-7.241l2.058-59.457c9.419-3.405 16.169-12.435 16.169-23.014v-35.781c0-9.811-5.808-18.286-14.164-22.182l33.463-38.187c9.144-10.434 9.77-26.77 1.457-37.998zm-72.11-65.185c3.342 0 6.416 1.665 8.654 4.688l.702.948v80.396c0 2.523 1.269 4.878 3.377 6.265 6.559 4.316 10.475 11.569 10.475 19.399 0 12.797-10.411 23.208-23.208 23.208s-23.208-10.411-23.208-23.208c0-8.201 4.198-15.633 11.23-19.882 2.248-1.358 3.622-3.793 3.622-6.419v-81.07c2.21-2.784 5.156-4.325 8.356-4.325zm73.598 249.633c0 5.218-4.246 9.464-9.464 9.464h-128.267c-5.219 0-9.464-4.246-9.464-9.464v-35.781c0-5.218 4.246-9.464 9.464-9.464h128.267c5.219 0 9.464 4.246 9.464 9.464z"/><path d="m105.063 208.447c.985-23.762 7.594-47.027 19.291-67.643 2.044-3.603.781-8.18-2.822-10.224-3.603-2.045-8.18-.781-10.224 2.822-12.964 22.847-20.253 48.643-21.257 74.972-12.943 3.291-22.545 15.04-22.545 28.993 0 16.494 13.419 29.913 29.913 29.913s29.913-13.419 29.913-29.913c0-13.853-9.466-25.533-22.269-28.92zm-7.644 43.833c-8.223 0-14.913-6.69-14.913-14.913s6.69-14.913 14.913-14.913 14.913 6.69 14.913 14.913-6.69 14.913-14.913 14.913z"/><path d="m493.752 29.327h-24.102c-8.756 0-15.88 7.124-15.88 15.88v4.551h-171.023v-4.551c0-8.756-7.124-15.88-15.88-15.88h-24.102c-8.756 0-15.88 7.124-15.88 15.88v4.551h-171.023v-4.551c0-8.756-7.124-15.88-15.88-15.88h-24.102c-8.756 0-15.88 7.124-15.88 15.88v24.102c0 8.756 7.124 15.88 15.88 15.88h24.102c8.756 0 15.88-7.124 15.88-15.88v-4.551h130.197c-20.822 9.564-39.618 23.457-55.053 40.991-2.737 3.109-2.436 7.848.674 10.585 1.425 1.254 3.192 1.871 4.953 1.871 2.08 0 4.15-.86 5.632-2.544 22.178-25.193 51.972-42.129 84.62-48.29v1.939c0 8.756 7.124 15.88 15.88 15.88h24.102c8.756 0 15.88-7.124 15.88-15.88v-1.94c68.087 12.829 118.957 71.544 121.831 141.076-12.807 3.384-22.278 15.066-22.278 28.922 0 16.494 13.419 29.913 29.913 29.913s29.913-13.419 29.913-29.913c0-13.951-9.601-25.7-22.543-28.992-2.397-63.089-40.715-118.164-96.006-143.616h130.193v4.551c0 8.756 7.124 15.88 15.88 15.88h24.102c8.756 0 15.88-7.124 15.88-15.88v-24.104c0-8.756-7.124-15.88-15.88-15.88zm-452.89 39.982c0 .485-.395.88-.88.88h-24.102c-.485 0-.88-.395-.88-.88v-24.102c0-.485.395-.88.88-.88h24.102c.485 0 .88.395.88.88zm386.264 168.057c0 8.223-6.69 14.913-14.913 14.913s-14.913-6.69-14.913-14.913 6.69-14.913 14.913-14.913 14.913 6.69 14.913 14.913zm-159.379-168.057c0 .485-.395.88-.88.88h-24.102c-.485 0-.88-.395-.88-.88v-24.102c0-.485.395-.88.88-.88h24.102c.485 0 .88.395.88.88zm226.885 0c0 .485-.395.88-.88.88h-24.102c-.485 0-.88-.395-.88-.88v-24.102c0-.485.395-.88.88-.88h24.102c.485 0 .88.395.88.88z"/></g></g></svg>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-300 text-lg title-font font-medium mb-3">UI/UX Design</h2>
+                <p class="text-gray-400 leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-1" width="58" height="58" viewBox="0 0 512 512"><g><path d="M472,56H40A32.042,32.042,0,0,0,8,88V360a32.042,32.042,0,0,0,32,32H204.9l-10.67,32H168a8,8,0,0,0-8,8v16H88a8,8,0,0,0,0,16H440a8,8,0,0,0,0-16H352V432a8,8,0,0,0-8-8H317.77L307.1,392H472a32.042,32.042,0,0,0,32-32V88A32.042,32.042,0,0,0,472,56ZM336,440v8H176v-8ZM211.1,424l10.67-32h68.46l10.67,32ZM488,360a16.021,16.021,0,0,1-16,16H40a16.021,16.021,0,0,1-16-16V344H488ZM143.66,256l-3,72h-9.32l-3-72Zm-14.22-16,5.34-32h2.44l5.34,32ZM136,192c-8.67,0-16-10.99-16-24,0-8.21,8.38-20.14,15.98-28.55C142.83,147.05,152,159.2,152,168,152,181.01,144.67,192,136,192Zm87.06-16,.94,1.89V184H192v-6.11l.94-1.89Zm-22.12-16L208,145.89,215.06,160ZM224,200V327a8.258,8.258,0,0,0,.07,1H191.93a8.258,8.258,0,0,0,.07-1V200Zm72-32h24v16h-8a8,8,0,0,0,0,16h8v16H296a8,8,0,0,0,0,16h24v16h-8a8,8,0,0,0,0,16h8v16H296a8,8,0,0,0,0,16h24v32H264V136h56v16H296a8,8,0,0,0,0,16Zm96,96v63a8.258,8.258,0,0,0,.07,1H359.93a8.258,8.258,0,0,0,.07-1V264Zm-32-16v-6.11l16-32,16,32V248Zm128,80H407.93a8.258,8.258,0,0,0,.07-1V240a8.081,8.081,0,0,0-.84-3.58l-24-48a8.009,8.009,0,0,0-14.32,0l-24,48A8.081,8.081,0,0,0,344,240v87a8.258,8.258,0,0,0,.07,1H336V128a8,8,0,0,0-8-8H256a8,8,0,0,0-8,8V328h-8.07a8.258,8.258,0,0,0,.07-1V176a8.081,8.081,0,0,0-.84-3.58l-24-48a8.009,8.009,0,0,0-14.32,0l-24,48A8.081,8.081,0,0,0,176,176V327a8.258,8.258,0,0,0,.07,1h-19.4l3.32-79.67c.01-.18,0-.36,0-.55v-.24a8.013,8.013,0,0,0-.1-.84v-.02l-7.4-44.41C161.78,195.26,168,182.52,168,168c0-20.56-23.83-43.33-26.55-45.86a8.017,8.017,0,0,0-10.9,0C127.83,124.67,104,147.44,104,168c0,14.52,6.22,27.26,15.51,34.27l-7.4,44.41v.02a8.013,8.013,0,0,0-.1.84v.24c0,.19-.01.37,0,.55L115.33,328H24V88A16.021,16.021,0,0,1,40,72H472a16.021,16.021,0,0,1,16,16Z"/><path d="M96,352H48a8,8,0,0,0,0,16H96a8,8,0,0,0,0-16Z"/><path d="M128,352h-8a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Z"/><path d="M208,208a8,8,0,0,0-8,8v88a8,8,0,0,0,16,0V216A8,8,0,0,0,208,208Z"/><path d="M376,272a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V280A8,8,0,0,0,376,272Z"/><path d="M48,104h64a8,8,0,0,0,0-16H48a8,8,0,0,0,0,16Z"/><path d="M48,128H64a8,8,0,0,0,0-16H48a8,8,0,0,0,0,16Z"/><path d="M432,312h32a8,8,0,0,0,0-16H432a8,8,0,0,0,0,16Z"/><path d="M456,288h8a8,8,0,0,0,0-16h-8a8,8,0,0,0,0,16Z"/></g></svg>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-300 text-lg title-font font-medium mb-3">Front-End Development</h2>
+                <p class="text-gray-400 leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                <svg id="Capa_1" enable-background="new 0 0 512 512" class="w-16 h-16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m289.763 193.506c4.15 0 7.515-3.364 7.515-7.515s-3.365-7.515-7.515-7.515h-67.526c-4.15 0-7.515 3.364-7.515 7.515s3.364 7.515 7.515 7.515z"/><path d="m488.242 197.918h-6.568c-1.042-14.262-12.971-25.55-27.495-25.55h-18.603c-4.74-19.338-22.328-33.639-42.784-33.639h-206.67c-4.15 0-7.515 3.364-7.515 7.515s3.365 7.515 7.515 7.515h206.67c15.06 0 27.769 11.761 28.932 26.776l5.472 70.552c.306 3.94 3.597 6.933 7.484 6.933.195 0 .392-.007.59-.022 4.137-.321 7.232-3.936 6.911-8.073l-4.849-62.526h16.848c6.919 0 12.548 5.629 12.548 12.548v102.603c0 6.919-5.629 12.548-12.548 12.548h-6.944l-2.73-35.198c-.321-4.138-3.943-7.249-8.073-6.911-4.137.321-7.232 3.936-6.911 8.073l3.427 44.184c.667 8.606-2.194 16.835-8.058 23.17-5.863 6.336-13.846 9.825-22.478 9.825h-57.772c-25.423 0-38.433-13.682-51.015-26.914-10.392-10.929-21.138-22.229-37.626-22.229s-27.234 11.3-37.626 22.229c-12.582 13.232-25.591 26.914-51.015 26.914h-57.771c-8.632 0-16.615-3.489-22.478-9.825s-8.725-14.565-8.058-23.17l11.223-144.712c1.164-15.015 13.873-26.776 28.932-26.776h36.856c4.15 0 7.515-3.364 7.515-7.515s-3.364-7.515-7.515-7.515h-36.856c-20.456 0-38.044 14.301-42.784 33.639h-18.603c-14.523 0-26.452 11.288-27.495 25.55h-6.568c-13.099.001-23.757 10.658-23.757 23.759v59.985c0 13.101 10.658 23.758 23.758 23.758h6.635c1.44 13.863 13.191 24.707 27.428 24.707h6.198c.591 10.539 4.823 20.678 12.061 28.498 8.614 9.307 20.827 14.646 33.508 14.646h57.771c31.871 0 48.525-17.514 61.907-31.586 10.35-10.885 17.179-17.557 26.734-17.557s16.384 6.671 26.734 17.557c13.382 14.072 30.035 31.586 61.907 31.586h57.772c12.681 0 24.895-5.339 33.508-14.646 7.237-7.82 11.47-17.959 12.061-28.498h6.198c14.237 0 25.988-10.845 27.428-24.707h6.635c13.1 0 23.758-10.658 23.758-23.758v-59.985c-.001-13.101-10.659-23.758-23.759-23.758zm-442.97 104.632v-37.016c0-4.151-3.364-7.515-7.515-7.515s-7.515 3.364-7.515 7.515v24.856h-6.485c-4.813 0-8.728-3.916-8.728-8.729v-59.985c0-4.813 3.915-8.729 8.728-8.729h6.485v22.528c0 4.151 3.364 7.515 7.515 7.515s7.515-3.364 7.515-7.515v-35.53c0-6.919 5.629-12.548 12.548-12.548h16.848l-9.904 127.701h-6.944c-6.918 0-12.548-5.629-12.548-12.548zm451.699-20.889c0 4.813-3.915 8.729-8.728 8.729h-6.485v-77.443h6.485c4.813 0 8.728 3.916 8.728 8.729z"/></g></svg>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-300 text-lg title-font font-medium mb-3">VR Development</h2>
+                <p class="text-gray-400 leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+              </div>
+            </div>
+          </div>
+          <button class="contact flex mx-auto mt-16 text-white border-0 py-2 px-8 focus:outline-none draw-border main-cta text-xl">Contact</button>
+        </div>
+      </section>
+
+      <section class="section-contact text-gray-700 body-font relative">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Lets get in touch</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-1/2">
+                <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2" placeholder="Name" type="text">
+              </div>
+              <div class="p-2 w-1/2">
+                <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2" placeholder="Email" type="email">
+              </div>
+              <div class="p-2 w-full">
+                <textarea class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block" placeholder="Message"></textarea>
+              </div>
+              <div class="p-2 w-full">
+                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+              </div>
+              <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                <p class="leading-normal my-5">or stay in touch
+                </p>
+                <span class="inline-flex">
+                  <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="about text-gray-700 body-font">
+        <div class="container mx-auto flex px-16 py-24 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-3/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" style="pointer-events: none;" alt="hero" src="./img/about2.png">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-3 font-medium text-gray-300">A bit about
+              myself
+            </h1>
+            <div class="flex mb-8 justify-center">
+              <div class="w-48 h-1 rounded-full inline-flex" style="background: #d4d2cb;
+              height: 0.1rem;"></div>
+            </div>
+            <p class="mb-16 leading-relaxed text-gray-400">Hi there, I am Sahil Gulati an aspiring visual designer and front end developer from Delhi NCR, India.
+              I love solving problems related to products, users or basically anything related to human computer interaction. Apart from work, I like lofi music, space documentaries and gaming.
+            </p>
+            <h1 class="title-font sm:text-4xl text-3xl mb-3 font-medium text-gray-300">My vision
+            </h1>
+            <div class="flex mb-8 justify-center">
+              <div class="w-32 h-1 rounded-full inline-flex"  style="background: #d4d2cb;
+              height: 0.1rem;"></div>
+            </div>
+            <p class="mb-8 leading-relaxed text-gray-400">Focus on products that catered to your user's needs long before they even know they need something.
+              If we reduce users’ stress level or give them a momentary feeling of accomplishment, we’re helping to change the world.
+            </p>
+            <!-- <div class="flex justify-center">
+              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+              <button class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Button</button>
+            </div> -->
+          </div>
+          <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-3/6">
+            <img class="object-cover object-center rounded" style="pointer-events: none;" alt="hero" src="./img/about2.png">
+          </div> -->
+        </div>
+      </section>
+
+      <footer class="footer text-gray-700 body-font">
+        <div class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
+          <p class="text-sm text-gray-900 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">
+            <a href="./img/Sahil_resume_fe.pdf" class="text-gray-400 ml-1" rel="noopener noreferrer" download="proposed_file_name">Download resume</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-400">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-400">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-400">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-400">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+      <script>
+		  	
+
+			
+			 //this = window
+				$('.hero-content').ripples({
+				dropRadius: 40,
+				resolution: 800
+			})
+					 /* ... */
+		  
+	  </script>
+      
+      <script src="./node_modules/sal.js/dist/sal.js"></script>
+      <script type="module">
+        import jump from './node_modules/jump.js/dist/jump.module.js'
+
+        var button=document.getElementById('project')
+        button.addEventListener('click', () => {
+          jump('.section-work', {
+            duration: 1200,
+            offset: 100
+          });
+        })
+
+        var button1=document.getElementById('button-about')
+        button1.addEventListener('click', () => {
+          jump('.about', {
+            duration: 2600,
+            offset: -150
+          });
+        })
+
+        var button2=document.getElementById('button-services')
+        button2.addEventListener('click', () => {
+          jump('.service', {
+            duration: 1900
+          });
+        })
+
+        var button3=document.getElementById('button-portfolio')
+        button3.addEventListener('click', () => {
+          jump('.section-work', {
+            duration: 1200,
+            offset: 100
+          });
+        })
+
+        var button4=document.getElementById('button-contact')
+        button4.addEventListener('click', () => {
+          jump('.section-work', {
+            duration: 1200,
+            offset: 100
+          });
+        })
+        sal({
+          once:true
+        });
+      </script>
+      <script>
+      TweenMax.from(".hero-section", 2, {
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+	TweenMax.from(".heading-primary", 2, {
+      opacity: 0,
+	  y: 30,
+      ease: Expo.easeInOut
+    })
+    TweenMax.from(".content-intro", 2, {
+      opacity: 0,
+	  y: 30,
+    delay: 0.5,
+      ease: Expo.easeInOut
+    })
+    TweenMax.from("#project",1.5, {
+      delay: 1,
+      opacity: 0,
+      x: -15,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from("header",1.5, {
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+
+      </script>
+
+
+
+</body>
+</html>

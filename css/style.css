@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0; }
+
+body{
+    font-family: 'Roboto';
+    -webkit-font-smoothing: antialiased;
+    background: #fcfcfc;
+    overflow-x: hidden;
+  }
+  @media (max-width: 640px){
+      
+      .content-main{
+        margin-left: 0;
+      }
+.container{
+    padding: 2rem 0;
+    }
+
+    .content-container{
+      padding: 2rem 1rem;
+    }
+}
+header a{
+  cursor: pointer;
+}
+.hero-content{
+  display: hidden;
+  position: relative;
+  background: url('../img/paint_stains_liquid_170318_3840x2160.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.square-background{
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    min-width: 20px;
+    top: 25%;
+    left: -10%;
+    background: linear-gradient(90deg, #e6e5e2 16px, transparent 1%) center, linear-gradient(#e6e5e2 16px, transparent 1%) center, rgba(226, 0, 68, 0.582);
+  background-size: 18px 18px;
+  z-index: -10;
+}
+.heading-primary{
+   /* font-family: 'Bebas';
+    text-transform: uppercase;
+    
+    letter-spacing: -3px;
+    color: #47282C;
+    transition: all 0.2s ease-out; */
+font-family: 'Roboto', sans-serif;
+color: #f3f2f1;
+line-height: 120%;
+}
+@media (max-width:1080px){
+  .overlay-para{
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 768px){
+  .content-img{
+        display: none;
+    }
+}
+@media (min-width: 1280px){
+/* .heading-primary {
+    font-size: 4rem;
+} */
+}
+
+.heading-secondary{
+    /* font-family: 'Source Sans Pro';
+    color: #5D5757; */
+}
+.heading-color{
+    /* color: #E20045; */
+}
+
+.heading-primary:hover{
+    /* color: #E20045;
+    transform: translateX(-5px); */
+}
+.content-intro{
+    font-family: 'Karla', sans-serif;
+    color: #f5f3f2;
+    opacity: 0.90;
+    /* letter-spacing: 1px; */
+    font-size: 1rem;
+    align-self: flex-end;
+    text-justify: auto;
+}
+.main-cta{
+    color: #f5f3f2;
+    font-family: 'Karla', sans-serif;;
+    font-style: normal;
+    font-size: 1rem;
+}
+.draw-border {
+    -webkit-box-shadow: inset 0 0 0 2px #f5f3f2;
+          box-shadow: inset 0 0 0 2px #f5f3f2;
+    color: #f5f3f2;
+    -webkit-transition: color 0.25s 0.08333s;
+    transition: color 0.25s 0.08333s;
+    position: relative;
+  }
+  
+  .draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .draw-border::before {
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+  }
+  
+  .draw-border::after {
+    border-top-width: 2px;
+    border-right-width: 2px;
+  }
+  
+  .draw-border:hover {
+    color: #d8b692;
+  }
+  
+  .draw-border:hover::before, .draw-border:hover::after {
+    border-color: #c78844;
+    -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .draw-border:hover::before {
+    -webkit-transition-delay: 0s, 0s, 0.25s;
+            transition-delay: 0s, 0s, 0.25s;
+  }
+  
+  .draw-border:hover::after {
+    -webkit-transition-delay: 0s, 0.25s, 0s;
+            transition-delay: 0s, 0.25s, 0s;
+  }
+  
+  /* .btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    letter-spacing: 0.05rem;
+  } */
+  
+  .section-work{
+    background: url(../img/merbbles.jpg) no-repeat center fixed;
+    background-size: cover ;
+  }
+
+.section-work>div{
+  /* background: url(../img/paint_stains_bubbles_139960_3840x2160.jpg) no-repeat center center fixed;
+  background-size: cover; */
+  background: #121212;
+  
+}
+/* .section-work>div{
+  background: #ffefe2;
+} */
+.heading-work-intro{
+  font-family: 'Bebas';
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 150%;
+}
+/* .heading-work-intro::after{
+  content: "";
+  height: 5px;
+  width: 5rem;
+  background-color: currentColor;
+  display: block;
+} */
+.intro-para{
+  /* font-weight: 300; */
+}
+.heading-label{
+  padding: 1rem 0;
+  color: #e6e5e2;
+  display: none;
+}
+
+@media (max-width: 768px){
+  .heading-label{
+    display: block;
+  } 
+}
+/* .heading-work-intro::after{
+  content: "";
+  height: 1px;
+  display: block;
+background-color: rgb(196, 200, 255);
+} */
+.content-images{
+  font-family: 'Lato', sans-serif;
+}
+
+.content-overlay-1{
+  opacity: 0;
+  border-color: #352f27;
+  transition: all 0.25s ease-in;
+}
+.content-overlay-1:hover{
+  opacity: 0.95;
+  border-color: #352f27;
+  background-color: #352f27;
+}
+.content-overlay-2{
+  opacity: 0;
+  border-color: #335F51;
+  transition: all 0.25s ease-in;
+}
+.content-overlay-2:hover{
+  opacity: 0.95;
+  border-color: #335F51;
+  background-color: #335F51;
+}
+.content-overlay-3{
+  opacity: 0;
+  border-color: rgb(161, 32, 69);
+  transition: all 0.25s ease-in;
+}
+.content-overlay-3:hover{
+  opacity: 0.95;
+  border-color: rgb(161, 32, 69);
+  background-color: rgb(161, 32, 69);
+}
+.content-overlay-4{
+  opacity: 0;
+  border-color: rgb(161, 32, 69);
+  transition: all 0.25s ease-in;
+}
+.content-overlay-4:hover{
+  opacity: 0.95;
+  border-color: #121212;
+  background-color: #121212;
+}
+.content-overlay-5{
+  opacity: 0;
+  border-color: #08222D;
+  transition: all 0.25s ease-in;
+}
+.content-overlay-5:hover{
+  opacity: 0.95;
+  border-color: #08222D;
+  background-color: #08222D;
+}
+.heading-overlay-primary{
+  color: #fdfdfd;
+}
+
+.heading-overlay-secondary{
+  color: #edc7b7;  
+  display: inline-block;
+  transition: all 0.1s ease-in;
+}
+.heading-overlay-secondary:hover{
+  color: #c7ada2;
+  text-decoration: underline;
+}
+.overlay-para{
+  color: #e6e5e2;
+  opacity: 0.85;
+  font-weight: 300;
+}
+.ui-gallery{
+  background: rgb(247, 234, 239);
+  background: url(../img/paint_liquid_stains_140390_3840x2400.jpg) no-repeat center fixed;
+  background-size: cover ;
+}
+.ui-gallery>div{
+  background: rgb(240, 238, 237);}
+  
+.ui-gallery h1{
+  color: #121212;
+  font-family: 'Bebas', sans-serif;
+  line-height: 150%;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+/* .ui-gallery h1::after{
+  content: "";
+  height: 5px;
+  width: 5rem;
+  background-color: currentColor;
+  display: block;
+} */
+.ui-gallery img{
+  transition: transform .35s;
+}
+.ui-gallery img:hover{
+  transform: scale(1.025);
+}
+.draw-border-black {
+  font-family: 'Karla', sans-serif;
+  -webkit-box-shadow: inset 0 0 0 2px #121212;
+        box-shadow: inset 0 0 0 2px #121212;
+  color: #121212;
+  -webkit-transition: color 0.25s 0.08333s;
+  transition: color 0.25s 0.08333s;
+  position: relative;
+}
+
+.draw-border-black::before, .draw-border-black::after {
+  border: 0 solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border-black::before {
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.draw-border-black::after {
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.draw-border-black:hover {
+  color: #836a50;
+}
+
+.draw-border-black:hover::before, .draw-border-black:hover::after {
+  border-color: #c78844;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.draw-border-black:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border-black:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+.dribble-cta{
+  
+}
+.heartbeat{
+  margin-top: 5px;
+}
+.dribble-cta:hover .heartbeat {-webkit-animation:heartbeat 1.5s ease-in-out infinite both;animation:heartbeat 1.5s ease-in-out infinite both}
+@-webkit-keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}
+
+.service, .service h1, .service h2 {
+  /* color: #e6e5e2; */
+  /* background: #121212; */
+}
+.service>div{
+  background: #121212;
+}
+.service{
+  /* background: #121212; */
+  background:url(../img/merbbles.jpg) no-repeat center fixed;
+  background-size: cover
+}
+.text-gray-300{
+  color: #e9e5dc;
+}
+.text-gray-400{
+  color: #d4d2cb;
+  opacity: 0.75;
+}
+
+.section-contact{
+  background:url(../img/paint_liquid_stains_140390_3840x2400.jpg) no-repeat center fixed;
+  background-size: cover
+}
+
+.section-contact>div{
+  background: #f0eeed;
+}
+
+/* .about{
+  background:url(../img/merbbles.jpg) no-repeat center fixed;
+  background-size: cover
+} */
+.about{
+  background: #121212;
+}
+.about>p{
+  font-family: 'Karla', sans-serif;
+}
+@media (min-width: 1024px){
+.lg\:max-w-lg {
+    max-width: 24rem;
+}
+}
+
+.footer{
+  background: #222222;
+}
+/* .top-scroller {
+  position: fixed;
+      bottom: 100px;
+      right: 10px;
+      font-size: 1em;
+      z-index: 2;
+      text-align: center;
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background: rgba(0,0,0,.35);
+      color: #fff;
+      line-height: 40px;
+  
+  }
+   .top-scroller:hover {
+      background: rgba(0,0,0,.6);
+  } */
+  /* .content-main svg:hover {  
+    animation-name: floating;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 12px); }
+    to   { transform: translate(0, -0px); }    
+} */
